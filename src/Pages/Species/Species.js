@@ -2,7 +2,7 @@
 function App() {
     return (
       <div className="App">
-        <h1>Todas as especies tipo o schewbawcca</h1>
+        <h1>All species like schewbawcca</h1>
       </div>
     );
   }
