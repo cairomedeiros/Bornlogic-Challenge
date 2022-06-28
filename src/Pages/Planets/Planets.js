@@ -1,5 +1,28 @@
+import { useEffect, useState } from "react";
+import api from '../../services/api';
 
-function App() {
+
+function Planets() {
+
+  const [planet, setPlanet] = useState([]);
+
+  useEffect(() => {
+
+
+    async function loadApiPlanet(){
+
+      const response = await api.get ('planets');
+      setPlanet(response.data.results);
+
+      
+    }
+    
+    loadApiPlanet();
+
+  }, []);
+
+  console.log(planet)
+
     return (
       <div className="App">
         <h1>All planets like totoine</h1>
@@ -7,4 +30,4 @@ function App() {
     );
   }
   
-  export default App;
+  export default Planets;
