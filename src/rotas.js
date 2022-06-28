@@ -10,9 +10,9 @@ export default function Rotas(){
     return(
         <Routes>
             <Route path="/" exact element={<People/>}/>
-            <Route path="/Person" exact element={<Person/>}/>
-            <Route path="/Planets" exact element={<Planets/>}/>
-            <Route path="/Species" exact element={<Species/>}/>
+            <Route path="/people/:name" exact element={<Person/>}/>
+            <Route path="/planets" exact element={<Planets/>}/>
+            <Route path="/species" exact element={<Species/>}/>
         </Routes>
     )
 }

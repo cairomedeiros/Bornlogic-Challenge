@@ -22,8 +22,6 @@ function App() {
 
   }, []);
 
-  console.log(specie)
-
     return (
       <div className="App">
         <ul>

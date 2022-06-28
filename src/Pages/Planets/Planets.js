@@ -21,8 +21,6 @@ function Planets() {
 
   }, []);
 
-  console.log(planet)
-
     return (
       <div className="App">
         <ul>
