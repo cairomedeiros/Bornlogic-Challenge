@@ -25,7 +25,15 @@ function Planets() {
 
     return (
       <div className="App">
-        <h1>All planets like totoine</h1>
+        <ul>
+        {planet.map((planets) => {
+          return(
+            <li key={planets.url}>
+              <h1>{planets.name}</h1>
+            </li>
+          )
+        })}
+        </ul>
       </div>
     );
   }

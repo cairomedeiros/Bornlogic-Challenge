@@ -12,6 +12,7 @@ function App() {
     async function loadApiSpecie(){
 
       const response = await api.get ('species');
+      console.log(response)
       setSpecie(response.data.results);
 
       
@@ -25,7 +26,15 @@ function App() {
 
     return (
       <div className="App">
-        <h1>All species like schewbawcca</h1>
+        <ul>
+        {specie.map((species) => {
+          return(
+            <li key={species.url}>
+              <h1>{species.name}</h1>
+            </li>
+          )
+        })}
+        </ul>
       </div>
     );
   }
