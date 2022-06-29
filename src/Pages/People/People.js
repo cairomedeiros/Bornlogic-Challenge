@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
+import { Card, Container } from './style';
 
 function People() {
 
@@ -40,16 +41,16 @@ function People() {
 
     return (
       <div className="App">
-        <ul>
+        <Container className="container">
         {characters.map((character) => {
           return(
-            <li key={character.name}>
-              <div href="#">{character.name}</div>
+            <Card key={character.name}>
+              <h4 href="#">{character.name}</h4>
               <Link to={`people/${character.name}`}>Acessar</Link>
-            </li>
+            </Card>
           )
         })}
-        </ul>
+        </Container>
       </div>
     );
   }
