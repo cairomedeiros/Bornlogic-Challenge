@@ -4,6 +4,7 @@ import { Container, Card } from '../People/style';
 import { Link } from 'react-router-dom';
 
 
+
 function Planets() {
 
   const [planet, setPlanet] = useState([]);
@@ -24,7 +25,8 @@ function Planets() {
   }, []);
 
     return (
-      <div className="App">
+      <>
+       
         <Container>
         {planet.map((planets) => {
           return(
@@ -35,7 +37,7 @@ function Planets() {
           )
         })}
         </Container>
-      </div>
+      </>
     );
   }
   

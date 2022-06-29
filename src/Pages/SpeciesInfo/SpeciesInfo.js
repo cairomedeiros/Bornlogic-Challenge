@@ -15,8 +15,7 @@ export default function SpeciesInfo(){
     useEffect(() => {
        async function loadInfos(){
 
-        const response = await api.get(`species/?search=${nameSpecies}`)
-        console.log(response)
+        const response = await api.get(`species/?search=${nameSpecies}`);
         setInfo(response.data.results[0])
         
         

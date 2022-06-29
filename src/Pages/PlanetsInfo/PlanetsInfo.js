@@ -16,7 +16,7 @@ export default function PlanetsInfo(){
        async function loadInfos(){
 
         const response = await api.get(`planets/?search=${namePlanet}`)
-        console.log(response)
+        
         setInfo(response.data.results[0])
         
         

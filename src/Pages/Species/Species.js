@@ -4,6 +4,7 @@ import { Container, Card } from '../People/style';
 import { Link } from 'react-router-dom';
 
 
+
 function App() {
 
   const [specie, setSpecie] = useState([]);
@@ -14,7 +15,7 @@ function App() {
     async function loadApiSpecie(){
 
       const response = await api.get ('species');
-      console.log(response)
+      
       setSpecie(response.data.results);
 
       
@@ -25,7 +26,8 @@ function App() {
   }, []);
 
     return (
-      <div className="App">
+      <>
+      
         <Container>
         {specie.map((species) => {
           return(
@@ -36,7 +38,7 @@ function App() {
           )
         })}
         </Container>
-      </div>
+      </>
     );
   }
   

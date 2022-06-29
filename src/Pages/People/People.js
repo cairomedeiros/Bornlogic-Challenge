@@ -3,12 +3,15 @@ import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import { Card, Container } from './style';
 
+
+
+
 function People() {
 
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true)
 
-  
+
 
 
   useEffect(() => {
@@ -31,16 +34,26 @@ function People() {
   
   
 
-  if(loading){
-    return(
-      <div>
-        <h2>Loading characters...</h2>
-      </div>
-    )
-  }
+  
+
+
+
+  
+    
+    if(loading){
+      return(
+        <div>
+          <h2>Loading characters...</h2>
+        </div>
+      )
+    }
+
+
 
     return (
-      
+      <>
+        
+
         <Container className="container">
         {characters.map((character) => {
           return(
@@ -51,6 +64,7 @@ function People() {
           )
         })}
         </Container>
+        </>
       
     );
   }
