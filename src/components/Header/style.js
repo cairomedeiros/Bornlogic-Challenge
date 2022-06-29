@@ -4,8 +4,9 @@ export const Headerr = styled.header`
 
     display: flex;
     justify-content: space-evenly;
-    background-color: #242424;
-    border-bottom: 1px solid #282828;
+    background-color: #181818;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     a{
         text-decoration: none;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../../services/api';
+import { Container, Card } from '../People/style';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -24,15 +26,16 @@ function App() {
 
     return (
       <div className="App">
-        <ul>
+        <Container>
         {specie.map((species) => {
           return(
-            <li key={species.url}>
-              <h1>{species.name}</h1>
-            </li>
+            <Card key={species.url}>
+              <h4 style={{color: "#fff"}}>{species.name}</h4>
+              <Link to={`${species.name}`}>Acessar</Link>
+            </Card>
           )
         })}
-        </ul>
+        </Container>
       </div>
     );
   }

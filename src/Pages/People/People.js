@@ -40,7 +40,7 @@ function People() {
   }
 
     return (
-      <div className="App">
+      
         <Container className="container">
         {characters.map((character) => {
           return(
@@ -51,7 +51,7 @@ function People() {
           )
         })}
         </Container>
-      </div>
+      
     );
   }
   

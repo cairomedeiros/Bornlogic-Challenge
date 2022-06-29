@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../../services/api';
+import { Container, Card } from '../People/style';
+import { Link } from 'react-router-dom';
 
 
 function Planets() {
@@ -23,15 +25,16 @@ function Planets() {
 
     return (
       <div className="App">
-        <ul>
+        <Container>
         {planet.map((planets) => {
           return(
-            <li key={planets.url}>
-              <h1>{planets.name}</h1>
-            </li>
+            <Card key={planets.url}>
+              <h4 style={{color: "#fff"}}>{planets.name}</h4>
+              <Link to={`${planets.name}`}>Acessar</Link>
+            </Card>
           )
         })}
-        </ul>
+        </Container>
       </div>
     );
   }

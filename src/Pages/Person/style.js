@@ -6,7 +6,7 @@ export const ContainerPerson = styled.div `
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 50px ;
+    margin-top: 100px;
     background-color: #181818;
     height: 400px ;
     border-radius: 5px;

@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-
-export const Container = styled.div`
-
-    
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-
-`;
-
 export const Card = styled.div`
 
 background-color: #181818;
